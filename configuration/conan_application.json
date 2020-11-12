@@ -1,0 +1,24 @@
+{
+   "file":[
+      {
+         "name":"main.cpp",
+         "path":"configuration/template/app/main.cpp"
+      },
+      {
+         "name":"conanfile.txt",
+         "path":"configuration/template/app/conanfile.txt"
+      },
+      {
+         "name":"CMakeLists.txt",
+         "path":"configuration/template/app/CMakeLists.txt"
+      },
+      {
+         "name":"LICENSE",
+         "path":"configuration/template/LICENSE"
+      },
+      {
+         "name":"README.md",
+         "path":"configuration/template/README.md"
+      }
+   ]
+}
