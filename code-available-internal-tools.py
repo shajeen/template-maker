@@ -24,16 +24,17 @@ def create_structure(config_file, project_name, option_type):
     for d in data['file']:
         shutil.copy2(d["path"], dest+d["target"])   
     for d in data['file']:
+    	d2 = dest+d["target"]+d["name"]
         if d["name"] == "CMakeLists.txt" or d["name"] == "README.md":
-            replace_test_in_file(dest+d["target"]+d["name"], "example", project_name)        
+            replace_test_in_file(d2, "example", project_name)        
         if option_type == 1:
             if d["name"] == "CMakeLists.txt":
-                replace_test_in_file(dest+d["target"]+d["name"], "exampleApp", project_name+"App")
-                replace_test_in_file(dest+d["target"]+d["name"], "exampleLib", project_name+"Lib")
-                replace_test_in_file(dest+d["target"]+d["name"], "exampleTest", project_name+"Test")
+                replace_test_in_file(d2, "exampleApp", project_name+"App")
+                replace_test_in_file(d2, "exampleLib", project_name+"Lib")
+                replace_test_in_file(d2, "exampleTest", project_name+"Test")
             elif d["name"] == "conanfile.py":
-                replace_test_in_file(dest+d["target"]+d["name"], "exampleLib", project_name+"Lib")
-                replace_test_in_file(dest+d["target"]+d["name"], "exampleConan", project_name+"Conan")
+                replace_test_in_file(d2, "exampleLib", project_name+"Lib")
+                replace_test_in_file(d2, "exampleConan", project_name+"Conan")
 
 def empty_project_argument(empty_project, project_name):
     option_type = empty_project
