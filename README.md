@@ -1,14 +1,26 @@
 # internal-tools
 
-#### Install the requirement packages
-```[python]
-pip install -r requirements.txt
+#### Usage
+```[bash]
+╰─⠠⠵ python main.py --h
+usage: main.py [-h] [--project_name PROJECT_NAME] [--empty_project {0,1}]
+
+Internal tools
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --project_name PROJECT_NAME
+                        Enter project name
+  --empty_project {0,1}
+                        Create empty project structure, ({0} - conan CMake app structure), ({1} - conan CMake lib structure)
 ```
 
-#### Script, for creating cmake conan application structure
+**To create CMake conan application structure**
+```[bash]
+python main.py --project_name=sampleApplication --empty_project=0
+```
 
-![rsz_screenshot_from_2020-11-13_00-36-37](https://user-images.githubusercontent.com/2623563/98984889-ca7d1480-2548-11eb-9b8d-cc234afecdd4.png)
-
-```[python]
-python create_conan_application_project.py
+**To create CMake conan library structure**
+```[bash]
+python main.py --project_name=sampleLibrary --empty_project=1
 ```

@@ -1,32 +1,45 @@
 {
+   "folder":[
+      {
+         "name":"src",
+         "target":""
+      }
+   ],
    "file":[
       {
          "name":"main.cpp",
-         "path":"configuration/template/app/main.cpp"
+         "path":"configuration/template/app/main.cpp",
+         "target":"src/"
       },
       {
          "name":"conanfile.txt",
-         "path":"configuration/template/app/conanfile.txt"
+         "path":"configuration/template/app/conanfile.txt",
+         "target":""
       },
       {
          "name":"CMakeLists.txt",
-         "path":"configuration/template/app/CMakeLists.txt"
+         "path":"configuration/template/app/CMakeLists.txt",
+         "target":""
       },
       {
          "name":"LICENSE",
-         "path":"configuration/template/LICENSE"
+         "path":"configuration/template/LICENSE",
+         "target":""
       },
       {
          "name":"README.md",
-         "path":"configuration/template/README.md"
+         "path":"configuration/template/README.md",
+         "target":""
       },
 	  {
 		 "name":"_clang-format",
-		 "path":"configuration/template/_clang-format"
+       "path":"configuration/template/_clang-format",
+       "target":""
 	  },
 	  {
 		 "name":"_gitignore",
-		 "path":"configuration/template/_gitignore"	  
+       "path":"configuration/template/_gitignore",
+       "target":""	  
 	  }
    ]
 }

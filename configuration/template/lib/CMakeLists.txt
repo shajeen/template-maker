@@ -15,17 +15,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-option(APP "Build test application for the library" off)
-option(UNIT_TEST "Build unit-test for the library" off)
-
 add_subdirectory(lib)
-
-#
-# test application by -DAPP=on
-# unit-test by -DUNIT_TEST=on
-#
-#if (APP)
-	add_subdirectory(app)
-#elseif (UNIT_TEST)
-	add_subdirectory(test)
-#endif
+add_subdirectory(app)
+add_subdirectory(test)
