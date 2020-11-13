@@ -19,6 +19,14 @@
       {
          "name":"README.md",
          "path":"configuration/template/README.md"
-      }
+      },
+	  {
+		 "name":"_clang-format",
+		 "path":"configuration/template/_clang-format"
+	  },
+	  {
+		 "name":"_gitignore",
+		 "path":"configuration/template/_gitignore"	  
+	  }
    ]
 }
