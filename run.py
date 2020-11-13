@@ -6,27 +6,27 @@ import os
 def replace_test_in_file(file, from_text, to_text):
     print(file, from_text, to_text)
     with open(file) as f:
-        newText = f.read().replace(from_text, to_text)     
+        newText = f.read().replace(from_text, to_text)
     with open(file, "w") as f:
-        f.write(newText)    
+        f.write(newText)
 
-def create_structure(config_file, project_name, option_type):    
+def create_structure(config_file, project_name, option_type):
     with open(config_file) as file:
-        data = json.load(file)   
-    dest = '/'    
+        data = json.load(file)
+    dest = '/'
     if not os.path.isdir('out'):
         os.mkdir('out')
-    dest = os.path.dirname(os.path.realpath(__file__))+'/out/'        
+    dest = os.path.dirname(os.path.realpath(__file__))+'/out/'
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
         if not os.path.isdir(dir_d):
-            os.mkdir(dir_d+"/")    
+            os.mkdir(dir_d+"/")
     for d in data['file']:
-        shutil.copy2(d["path"], dest+d["target"])   
+        shutil.copy2(d["path"], dest+d["target"])
     for d in data['file']:
-    	d2 = dest+d["target"]+d["name"]
+        d2 = dest+d["target"]+d["name"]
         if d["name"] == "CMakeLists.txt" or d["name"] == "README.md":
-            replace_test_in_file(d2, "example", project_name)        
+            replace_test_in_file(d2, "example", project_name)
         if option_type == 1:
             if d["name"] == "CMakeLists.txt":
                 replace_test_in_file(d2, "exampleApp", project_name+"App")
@@ -46,13 +46,12 @@ def empty_project_argument(empty_project, project_name):
         config_file = 'configuration/conan_library.json'
 
     create_structure(config_file, project_name, option_type)
-    print('Done, please check \"out\" folder.')    
-
+    print('Done, please check \"out\" folder.')
 
 def main():
     parser = argparse.ArgumentParser(description='Internal tools')
     parser.add_argument("--project_name", type=str, help="Enter project name")
-    parser.add_argument("--empty_project", type=int, choices=[0, 1], 
+    parser.add_argument("--empty_project", type=int, choices=[0, 1],
                         help="Create empty project structure, ({0} - conan CMake app structure), ({1} - conan CMake lib structure)")
     args = parser.parse_args()
 
