@@ -4,7 +4,6 @@ import json
 import os
 
 def replace_test_in_file(file, from_text, to_text):
-    print(file, from_text, to_text)
     with open(file) as f:
         newText = f.read().replace(from_text, to_text)
     with open(file, "w") as f:
@@ -19,9 +18,11 @@ def create_structure(config_file, project_name, option_type):
     dest = os.path.dirname(os.path.realpath(__file__))+'/out/'
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
+        print('created folder: ', dir_d)
         if not os.path.isdir(dir_d):
             os.mkdir(dir_d+"/")
     for d in data['file']:
+        print('created file: ', dest+d["target"]+d["name"])
         shutil.copy2(d["path"], dest+d["target"])
     for d in data['file']:
         d2 = dest+d["target"]+d["name"]
