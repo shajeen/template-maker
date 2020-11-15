@@ -56,10 +56,14 @@ def main():
     parser.add_argument("--project_name", type=str, help="Enter project name")
     parser.add_argument("--empty_project", type=int, choices=[0, 1],
                         help="Create empty project structure, ({0} - conan CMake app structure), ({1} - conan CMake lib structure)")
+    parser.add_argument("--update_submodule", help='update all submodule.')
     args = parser.parse_args()
 
     if args.project_name is not None and args.empty_project is not None:
         empty_project_argument(args.empty_project, args.project_name)
+    elif args.update_submodule is not None:
+    	os.system('git submodule update --remote --merge')
+           
 
 if __name__ == "__main__":
     main()
