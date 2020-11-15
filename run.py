@@ -50,6 +50,8 @@ def empty_project_argument(empty_project, project_name):
     print('Done, please check \"out\" folder.')
 
 def main():
+    if os.path.isdir('out'):
+        shutil.rmtree('out')
     parser = argparse.ArgumentParser(description='Internal tools')
     parser.add_argument("--project_name", type=str, help="Enter project name")
     parser.add_argument("--empty_project", type=int, choices=[0, 1],
