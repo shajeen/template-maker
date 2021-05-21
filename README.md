@@ -33,10 +33,3 @@ python run.py --project_name=sampleLibrary --empty_project=1
 ```[bash]
 python run.py --project_name=sampleLibrary --empty_project=1
 ```
-
-## other scripts
-**Create linux conan enviroment [bash script]**
-```[bash]
-bash ./create_conan_linux_env 
-```
-
