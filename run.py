@@ -52,7 +52,7 @@ def empty_project_argument(empty_project, project_name):
 def main():
     if os.path.isdir('out'):
         shutil.rmtree('out')
-    parser = argparse.ArgumentParser(description='Internal tools')
+    parser = argparse.ArgumentParser(description='CMake-Conan-template-creator')
     parser.add_argument("--project_name", type=str, help="Enter project name")
     parser.add_argument("--empty_project", type=int, choices=[0, 1],
                         help="Create empty project structure, ({0} - conan CMake app structure), ({1} - conan CMake lib structure)")
