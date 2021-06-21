@@ -1,4 +1,6 @@
-# internal-tools
+# CMake Conan template
+
+with the help of this script, create CMake supported conan template empty structure.
 
 #### Usage
 ```[bash]
