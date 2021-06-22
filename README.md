@@ -3,7 +3,7 @@
 with the help of this script, create CMake supported conan template empty structure.
 
 #### Usage
-```[bash]
+```powershell
 $ python run.py --help
 usage: run.py [-h] [--project_name PROJECT_NAME] [--empty_project {0,1}]
 
@@ -20,11 +20,19 @@ optional arguments:
 ```
 
 **To create CMake conan application structure [python script]**
-```[bash] 
+```powershell 
 python run.py --project_name=sampleApplication --empty_project=0
 ```
 
 **To create CMake conan library structure [python script]**
-```[bash]
+```powershell
 python run.py --project_name=sampleLibrary --empty_project=1
 ```
+
+### Bug report
+
+if you face any issue or need any kind of other help. Please raise a issue.
+
+### Contributing
+
+Please read the [CONTRIBUTING](https://github.com/shajeen/spreadsheet-to-cpplib/blob/main/CONTRIBUTING.md) before raising the PR.
