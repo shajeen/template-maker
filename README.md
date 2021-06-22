@@ -35,4 +35,4 @@ if you face any issue or need any kind of other help. Please raise a issue.
 
 ### Contributing
 
-Please read the [CONTRIBUTING](https://github.com/shajeen/spreadsheet-to-cpplib/blob/main/CONTRIBUTING.md) before raising the PR.
+Please read the [CONTRIBUTING](https://github.com/shajeen/CMake-Conan-template-creator/blob/main/CONTRIBUTING.md) before raising the PR.
