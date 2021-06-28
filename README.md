@@ -1,9 +1,5 @@
-<p align="center">
-  <a href="https://github.com/shajeen/CMake-Conan-template-creator/blob/main/README.md">
-    <img src="https://user-images.githubusercontent.com/2623563/123551649-5d915480-d790-11eb-8ec2-932f7c6038ea.png" alt="Logo" width="640" height="320">
-  </a>
-  
-# CMake Conan template
+ 
+# Template maker
   with the help of this script, create CMake supported conan template empty structure.
 
 #### Usage
