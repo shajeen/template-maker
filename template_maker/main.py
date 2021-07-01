@@ -41,8 +41,9 @@ def empty_project_argument(empty_project, project_name):
     option_type = empty_project
     config_file = ""
 
+    here = os.path.dirname(os.path.abspath(__file__))
     if option_type == 0:
-        config_file = 'configuration/conan_application.json'
+        config_file = os.path.join(here,'configuration/conan_application.json')
     elif option_type == 1:
         config_file = 'configuration/conan_library.json'
 
@@ -61,6 +62,3 @@ def main():
 
     if args.name is not None and args.ptype is not None:
         empty_project_argument(args.ptype, args.name)
-           
-if __name__ == "__main__":
-    main()

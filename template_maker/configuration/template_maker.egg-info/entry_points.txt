@@ -1,0 +1,3 @@
+[console_scripts]
+template-maker = template_maker.main:main
+

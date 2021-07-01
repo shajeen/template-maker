@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+./template_maker/__init__.py
+./template_maker/main.py
+template_maker.egg-info/PKG-INFO
+template_maker.egg-info/SOURCES.txt
+template_maker.egg-info/dependency_links.txt
+template_maker.egg-info/entry_points.txt
+template_maker.egg-info/top_level.txt
