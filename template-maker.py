@@ -14,8 +14,8 @@ def create_structure(config_file, project_name, option_type):
         data = json.load(file)
     dest = '/'
     if not os.path.isdir('out'):
-        os.mkdir('out')
-    dest = os.path.dirname(os.path.realpath(__file__))+'/out/'
+        os.makedirs(os.path.join('out',project_name))
+    dest = os.path.join(os.path.dirname(os.path.realpath(__file__)),'out',project_name,'')
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
         print('created folder: ', dir_d)
@@ -52,15 +52,15 @@ def empty_project_argument(empty_project, project_name):
 def main():
     if os.path.isdir('out'):
         shutil.rmtree('out')
-    parser = argparse.ArgumentParser(description='CMake-Conan-template-creator')
-    parser.add_argument("--project_name", type=str, help="Enter project name")
-    parser.add_argument("--empty_project", type=int, choices=[0, 1],
+    parser = argparse.ArgumentParser(description='Template-creator')
+    parser.add_argument("--name", type=str, help="Enter project name")
+    parser.add_argument("--ptype", type=int, choices=[0, 1],
                         help="Create empty project structure, ({0} - conan CMake app structure), ({1} - conan CMake lib structure)")
     
     args = parser.parse_args()
 
-    if args.project_name is not None and args.empty_project is not None:
-        empty_project_argument(args.empty_project, args.project_name)
+    if args.name is not None and args.ptype is not None:
+        empty_project_argument(args.ptype, args.name)
            
 if __name__ == "__main__":
     main()
