@@ -28,6 +28,7 @@ def create_structure(config_file, project_name, option_type):
     for d in data['file']:
         print('created file: ', dest+d["target"]+d["name"])
         here = os.path.dirname(os.path.abspath(__file__))
+        print(here)
         shutil.copy2(os.path.join(here,d["path"]), dest+d["target"])
     for d in data['file']:
         d2 = dest+d["target"]+d["name"]
