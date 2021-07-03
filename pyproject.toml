@@ -1,7 +1,12 @@
-
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
-build-backend = "setuptools.build_meta"
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "template_maker"
+author = "Sheik S Shajeen Ahamed"
+author-email = "shajeenahmed@gmail.com"
+home-page = "https://github.com/shajeen/template-maker"
+classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",]
+description-file = "README.md"
+

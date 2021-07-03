@@ -1,3 +1,6 @@
+"""
+with the help of this script, create CMake supported conan template empty structure.
+"""
 import argparse
 import shutil
 import json
