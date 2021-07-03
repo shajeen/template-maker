@@ -1,3 +1,6 @@
+"""
+with the help of this script, create CMake supported conan template empty structure.
+"""
 import argparse
 import shutil
 import json
@@ -12,18 +15,19 @@ def replace_test_in_file(file, from_text, to_text):
 def create_structure(config_file, project_name, option_type):
     with open(config_file) as file:
         data = json.load(file)
-    dest = '/'
-    if not os.path.isdir('out'):
-        os.makedirs(os.path.join('out',project_name))
-    dest = os.path.join(os.path.dirname(os.path.realpath(__file__)),'out',project_name,'')
+    dest = 'out/'+project_name+'/'
+    if os.path.exists('out'):
+        shutil.rmtree('out')
+    os.makedirs(dest)
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
         print('created folder: ', dir_d)
         if not os.path.isdir(dir_d):
-            os.mkdir(dir_d+"/")
+            os.makedirs(dir_d+"/")
     for d in data['file']:
         print('created file: ', dest+d["target"]+d["name"])
-        shutil.copy2(d["path"], dest+d["target"])
+        here = os.path.dirname(os.path.abspath(__file__))
+        shutil.copy2(os.path.join(here,d["path"]), dest+d["target"])
     for d in data['file']:
         d2 = dest+d["target"]+d["name"]
         if d["name"] == "CMakeLists.txt" or d["name"] == "README.md":
@@ -45,7 +49,7 @@ def empty_project_argument(empty_project, project_name):
     if option_type == 0:
         config_file = os.path.join(here,'configuration/conan_application.json')
     elif option_type == 1:
-        config_file = 'configuration/conan_library.json'
+        config_file = os.path.join(here,'configuration/conan_library.json')
 
     create_structure(config_file, project_name, option_type)
     print('Done, please check \"out\" folder.')

@@ -33,12 +33,12 @@
         },
         {
             "name":"_clang-format",
-            "path":"configuration/template/_clang-format",
+            "path":"configuration/template/.clang-format",
             "target":""
         },
         {
             "name":"_gitignore",
-            "path":"configuration/template/_gitignore",
+            "path":"configuration/template/.gitignore",
             "target":""
         }
     ]
