@@ -23,7 +23,7 @@ def create_structure(config_file, project_name, option_type):
         dir_d = dest+d["target"]+d["name"]
         print('created folder: ', dir_d)
         if not os.path.isdir(dir_d):
-            os.mkdir(dir_d+"/")
+            os.makedirs(dir_d+"/")
     for d in data['file']:
         print('created file: ', dest+d["target"]+d["name"])
         shutil.copy2(d["path"], dest+d["target"])
@@ -48,7 +48,7 @@ def empty_project_argument(empty_project, project_name):
     if option_type == 0:
         config_file = os.path.join(here,'configuration/conan_application.json')
     elif option_type == 1:
-        config_file = 'configuration/conan_library.json'
+        config_file = os.path.join(here,'configuration/conan_library.json')
 
     create_structure(config_file, project_name, option_type)
     print('Done, please check \"out\" folder.')
