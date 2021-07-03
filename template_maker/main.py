@@ -15,11 +15,10 @@ def replace_test_in_file(file, from_text, to_text):
 def create_structure(config_file, project_name, option_type):
     with open(config_file) as file:
         data = json.load(file)
-    dest = '/'
+    dest = '/out/'+project_name+'/'
     if os.path.exists('out'):
         shutil.rmtree('out')
-    os.makedirs('out/')
-    dest = os.path.join(os.path.dirname(os.path.realpath(__file__)),'out',project_name,'')
+    os.makedirs(dest)
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
         print('created folder: ', dir_d)
