@@ -69,7 +69,7 @@ template-maker --name="sample_application" --ptype=0
 
 ![Screenshot from 2021-07-03 20-57-44](https://user-images.githubusercontent.com/2623563/124359157-62974d80-dc41-11eb-882f-0f203fc3c62b.png)
 
-**Library mode with CMake conan support**
+### **Library mode with CMake conan support**
 ```sh
 template-maker --name="sample_library" --ptype=1
 ```
