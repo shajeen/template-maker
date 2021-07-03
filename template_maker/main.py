@@ -16,8 +16,9 @@ def create_structure(config_file, project_name, option_type):
     with open(config_file) as file:
         data = json.load(file)
     dest = '/'
-    if not os.path.isdir('out'):
-        os.makedirs(os.path.join('out',project_name))
+    if os.path.exists('output'):
+        shutil.rmtree('output')
+    os.makedirs('output/')
     dest = os.path.join(os.path.dirname(os.path.realpath(__file__)),'out',project_name,'')
     for d in data["folder"]:
         dir_d = dest+d["target"]+d["name"]
