@@ -27,7 +27,8 @@ def create_structure(config_file, project_name, option_type):
             os.makedirs(dir_d+"/")
     for d in data['file']:
         print('created file: ', dest+d["target"]+d["name"])
-        shutil.copy2(d["path"], dest+d["target"])
+        here = os.path.dirname(os.path.abspath(__file__))
+        shutil.copy2(os.path.join(here,d["path"]), dest+d["target"])
     for d in data['file']:
         d2 = dest+d["target"]+d["name"]
         if d["name"] == "CMakeLists.txt" or d["name"] == "README.md":
