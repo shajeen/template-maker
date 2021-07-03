@@ -15,7 +15,7 @@ def replace_test_in_file(file, from_text, to_text):
 def create_structure(config_file, project_name, option_type):
     with open(config_file) as file:
         data = json.load(file)
-    dest = '/out/'+project_name+'/'
+    dest = 'out/'+project_name+'/'
     if os.path.exists('out'):
         shutil.rmtree('out')
     os.makedirs(dest)
