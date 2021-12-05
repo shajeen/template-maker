@@ -1,14 +1,6 @@
-<!-- ![spread](https://user-images.githubusercontent.com/2623563/124358707-2105a300-dc3f-11eb-9173-f7132130ed02.png) -->
-
+![Reference (14)](https://user-images.githubusercontent.com/2623563/144739261-ac2dd054-abbd-4c28-92fb-6efe3fcf87a7.png)
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
-  <a href="https://github.com/shajeen/template-maker/blob/package/README.md">
-    <img src="https://user-images.githubusercontent.com/2623563/124358707-2105a300-dc3f-11eb-9173-f7132130ed02.png" alt="Logo" width="640" height="320">
-  </a>
-
-  <h3 align="center">template-maker</h3>
-
   <p align="center">
     An awesome tool to help in your projects!
     <br />
@@ -19,8 +11,6 @@
     ·
     <a href="https://github.com/shajeen/template-maker/issues/new?assignees=shajeen&labels=enhancement&template=feature_request.md&title=">Request Feature</a>
   </p>
-</p>
-
 
 ## About The Project
 ![Screenshot from 2021-07-03 20-49-54](https://user-images.githubusercontent.com/2623563/124358944-4515b400-dc40-11eb-8d08-6b792cd2a000.png)
